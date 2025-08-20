@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChidadMedia — Music, Movies, Gospel, Amapiano, Series & Movies</title>
+  <meta name="description" content="ChidadMedia: Download and stream Music, Movies, Gospel, Amapiano, Series and Movies easily." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b0d12; --card:#121621; --muted:#8b93a7; --text:#e8ecf4; --brand:#09f; --brand-2:#7cf; --accent:#14f195; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial; background:linear-gradient(180deg,#0a0c11, #0b0d12 40%, #0a0c11); color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1200px, 92%); margin-inline:auto}
+    header{position:sticky;top:0;z-index:30;background:rgba(11,13,18,.7);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .topbar{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#051421;font-weight:900}
+    .search{flex:1;max-width:520px;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid rgba(255,255,255,.06);padding:8px 12px;border-radius:14px}
+    .search input{flex:1;background:transparent;border:0;outline:0;color:var(--text);font-size:15px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;padding:10px 0 16px}
+    .chip{padding:8px 12px;border:1px solid rgba(255,255,255,.08);border-radius:999px;color:var(--muted);cursor:pointer;transition:.2s}
+    .chip.active,.chip:hover{border-color:var(--brand);color:#fff;}
+    main{padding:26px 0 56px}
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:16px}
+    @media(min-width:540px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;position:relative}
+    .card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.12)}
+    .thumb{aspect-ratio:16/9;background:#0a0c11;position:relative}
+    .badge{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.6);backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,.14);padding:4px 8px;border-radius:999px;font-size:12px}
+    .card-body{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px}
+    .title{font-weight:700;line-height:1.25}
+    .muted{color:var(--muted);font-size:13px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:12px;font-weight:600;font-size:14px;cursor:pointer}
+    .btn:hover{border-color:var(--brand)}
+    .pagination{display:flex;gap:8px;justify-content:center;margin-top:22px}
+    .page{border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:10px;cursor:pointer}
+    .page.active{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#051421;border-color:transparent}
+    .post{display:grid;gap:18px}
+    @media(min-width:900px){.post{grid-template-columns:2fr 1fr}}
+    .prose{line-height:1.75;color:#dbe2f5}
+    .prose h1{font-size:clamp(22px,3vw,32px)}
+    .prose p{margin:0 0 12px}
+    .sidebar{display:grid;gap:12px;height:max-content}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:26px 0;color:var(--muted);background:rgba(0,0,0,.2)}
+    .pill{font-size:12px;padding:6px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;margin-right:6px}
+    .toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#111826;border:1px solid rgba(255,255,255,.14);padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s}
+    .toast.show{opacity:1}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <a class="brand" href="#/">
+          <div class="logo">CM</div>
+          <div>
+            <div>ChidadMedia</div>
+            <small class="muted">Music • Movies • Gospel • Amapiano • Series • Movies</small>
+          </div>
+        </a>
+        <div class="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/></svg>
+          <input id="searchInput" type="search" placeholder="Search songs, videos, movies…" />
+        </div>
+        <a class="btn" href="#/submit">+ Upload New</a>
+      </div>
+      <nav class="nav" id="categoryNav"></nav>
+    </div>
+  </header>
+
+  <main class="container" id="app"></main>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div>© <span id="year"></span> ChidadMedia — Easy download and streaming.</div>
+        <div>
+          <span class="pill">Google Drive Usage</span>
+          <span class="pill">High Speed</span>
+          <span class="pill">No Signup</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Copied to clipboard</div>
+
+  <script>
+    const DRIVE_JSON_FILE_ID = "1KTvshWlwDRtFQz6FB6QKRKM0STpjig19";
+    const driveRaw = id => `https://drive.google.com/uc?export=download&id=${18Xn3tALa-0CTM9d9nkaGrKyBJ-5vmwpZ}`;
+    const driveView = id => `https://drive.google.com/uc?export=view&id=${18Xn3tALa-0CTM9d9nkaGrKyBJ-5vmwp}`;
+    const fmtDate = s => new Intl.DateTimeFormat("en-US", {dateStyle:'medium'}).format(new Date(s));
+
+    const state = { allPosts:[], filtered:[], categories:[], activeCat:'All', page:1, perPage:12, q:'' };
+    const $ = (sel, el=document) => el.querySelector(sel);
+    const $$ = (sel, el=document) => Array.from(el.querySelectorAll(sel));
+    function toast(msg){ const t=$('#toast'); t.textContent=msg||t.textContent; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
+
+    async function loadPosts(){
+      try{
+        const res = await fetch(driveRaw(DRIVE_JSON_FILE_ID));
+        const data = await res.json();
+        state.allPosts = (data.posts||[]).map(p=>({...p,_date:new Date(p.date||Date.now()).getTime()})).sort((a,b)=>b._date-a._date);
+        const FIXED_CATEGORIES=['Music','Movies','Gospel','Amapiano','Series','Movie'];
+        const derivedCats=Array.from(new Set(state.allPosts.map(p=>p.category).filter(Boolean)));
+        state.categories=['All',...Array.from(new Set([...FIXED_CATEGORIES,...derivedCats]))];
+        applyFilters(); buildCategoryNav(); router();
+      }catch(e){
+        console.error(e);
+        $('#app').innerHTML=`<div class="card" style="padding:18px">Failed to load data from Google Drive.</div>`
+      }
+    }
+
+    function applyFilters(){
+      const q=state.q.toLowerCase(); const cat=state.activeCat;
+      state.filtered=state.allPosts.filter(p=>(!q||(p.title||'').toLowerCase().includes(q)||(p.tags||[]).join(' ').toLowerCase().includes(q))&&(cat==='All'||p.category===cat));
+      state.page=1;
+    }
+
+    function renderList(){
+      const start=(state.page-1)*state.perPage;
+      const items=state.filtered.slice(start,start+state.perPage);
+      const cards=items.map(p=>`<article class="card">
+        <a href="#/post/${encodeURIComponent(p.slug)}">
+          <div class="thumb">
+            <img src="${p.thumbId?driveView(p.thumbId):(p.thumbUrl||'')}" alt="${p.title}" loading="lazy"/>
+            <span class="badge">${p.category||'Mixed'}</span>
+          </div>
+        </a>
+        <div class="card-body">
+          <a class="title" href="#/post/${encodeURIComponent(p.slug)}">${p.title}</a>
+          <div class="muted">${fmtDate(p.date)} • ${(p.tags||[]).slice(0,3).join(" • ")}</div>
+          <div class="row">
+            ${p.downloadId||p.downloadUrl?`<a class="btn" href="${p.downloadId?driveRaw(p.downloadId):p.downloadUrl}" target="_blank" rel="noopener">Download</a>`:''}
+            <a class="btn" href="#/post/${encodeURIComponent(p.slug)}">Details</a>
+          </div>
+        </div>
+      </article>`).join('');
+      const totalPages=Math.max(1,Math.ceil(state.filtered.length/state.perPage));
+      const pages=Array.from({length:totalPages},(_,i)=>{const n=i+1;return `<button class="page ${n===state.page?'active':''}" data-page="${n}">${n}</button>`}).join('');
+      $('#app').innerHTML=`<section class="grid">${cards||'<div class="card" style="padding:18px">No results.</div>'}</section><div class="pagination">${pages}</div>`;
+      $$('.page').forEach(btn=>btn.addEventListener('click',()=>{state.page=+btn.dataset.page; renderList()}));
+    }
+
+    function renderPost(slug){
+      const p=state.allPosts.find(x=>x.slug===slug);
+      if(!p){$('#app').innerHTML='<div class="card" style="padding:18px">Not found.</div>';return;}
+      $('#app').innerHTML=`
+        <section class="post">
+          <article>
+            <div class="thumb" style="border-radius:14px;overflow:hidden">
+              <img src="${p.thumbId?driveView(p.thumbId):(p.thumbUrl||'')}" alt="${p.title}"/>
+            </div>
+            <div class="prose">
+              <h1>${p.title}</h1>
+              <p class="muted">${fmtDate(p.date)} • ${p.category||'Mixed'}</p>
+              ${p.contentHtml||'<p>No additional description.</p>'}
+            </div>
+            <div class="row" style="gap:10px;margin:14px 0 0">
+              ${p.streamId||p.streamUrl?`<a class="btn" href="${p.streamId?driveView(p.streamId):p.streamUrl}" target="_blank">Watch</a>`:''}
+              ${p.downloadId||p.downloadUrl?`<a class="btn" href="${p.downloadId?driveRaw(p.downloadId):p.downloadUrl}" target="_blank">Download</a>`:''}
+              <button class="btn" id="copyBtn">Copy Link</button>
+            </div>
+            <div style="margin-top:12px" class="muted">Tags: ${(p.tags||[]).map(t=>`<a href="#/tag/${encodeURIComponent(t)}" class="pill">${t}</a>`).join(' ')}</div>
+          </article>
+          <aside class="sidebar">
+            <div class="card" style="padding:14px">
+              <div style="font-weight:700;margin-bottom:8px">Related Posts</div>
+              <div id="related"></div>
+            </div>
+          </aside>
+        </section>
+      `;
+      const rel=state.allPosts.filter(x=>x.category===p.category&&x.slug!==p.slug).slice(0,5).map(x=>`
+        <a class="row" href="#/post/${encodeURIComponent(x.slug)}" style="padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06)">
+          <img src="${x.thumbId?driveView(x.thumbId):(x.thumbUrl||'')}" alt="${x.title}" style="width:72px;height:45px;object-fit:cover;border-radius:8px"/>
+          <div style="flex:1">
+            <div style="font-weight:600">${x.title}</div>
+            <div class="muted" style="font-size:12px">${fmtDate(x.date)}</div>
+          </div>
+        </a>`).join('');
+      $('#related').innerHTML=rel||'<div class="muted">No related posts.</div>';
+      $('#copyBtn')?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);toast('Copied to clipboard')}catch{toast('Failed to copy');}});
+    }
+
+    function buildCategoryNav(){
+      const nav=$('#categoryNav');
+      nav.innerHTML=state.categories.map(cat=>`<button class="chip ${cat===state.activeCat?'active':''}" data-cat="${cat}">${cat}</button>`).join('');
+      $$('#categoryNav .chip').forEach(ch=>ch.addEventListener('click',()=>{
+        state.activeCat=ch.dataset.cat; applyFilters(); buildCategoryNav(); renderList(); window.scrollTo({top:0,behavior:'smooth'});
+      }));
+    }
+
+    function router(){
+      const hash=location.hash||'#/';
+      const [_,route,param]=hash.split('/');
+      if(route==='post'){ renderPost(decodeURIComponent(param||'')); return;}
+      if(route==='tag'){ state.q=decodeURIComponent(param||''); $('#searchInput').value=state.q; applyFilters(); renderList(); return;}
+      renderList();
+    }
+
+    window.addEventListener('hashchange', router);
+    $('#searchInput').addEventListener('input', (e)=>{ state.q=e.target.value; applyFilters(); renderList(); });
+    $('#year').textContent=new Date().getFullYear();
+    loadPosts();
+  </script>
+</body>
+</html>

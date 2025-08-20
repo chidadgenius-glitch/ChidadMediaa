@@ -1,0 +1,269 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "harmonize-kata",
+      "title": "Harmonize — Kata (Audio)",
+      "category": "Music",
+      "tags": ["Bongo Fleva","Audio"],
+      "date": "2025-08-15",
+      "thumbUrl": "https://picsum.photos/800/450?random=1",
+      "streamUrl": "https://example.com/audio.mp3",
+      "downloadUrl": "https://example.com/download.mp3"
+    },
+    {
+      "id": 2,
+      "slug": "movie-mwenda-wazimu",
+      "title": "Movie: Mwenda Wazimu (2025)",
+      "category": "Movies",
+      "tags": ["Movie","Swahili"],
+      "date": "2025-07-30",
+      "thumbUrl": "https://picsum.photos/800/450?random=2",
+      "downloadUrl": "https://example.com/mwenda-wazimu.mp4"
+    },
+    {
+      "id": 3,
+      "slug": "joyful-sounds-gospel",
+      "title": "Joyful Sounds — Praise Session",
+      "category": "Gospel",
+      "tags": ["Praise","Live"],
+      "date": "2025-07-20",
+      "thumbUrl": "https://picsum.photos/800/450?random=3",
+      "streamUrl": "https://example.com/gospel-praise.mp3",
+      "downloadUrl": "https://example.com/gospel-praise-download.mp3"
+    },
+    {
+      "id": 4,
+      "slug": "dj-fresh-amapiano-vol1",
+      "title": "DJ Fresh — Amapiano Mix Vol.1",
+      "category": "Amapiano",
+      "tags": ["Mix","Amapiano"],
+      "date": "2025-06-15",
+      "thumbUrl": "https://picsum.photos/800/450?random=4",
+      "downloadUrl": "https://example.com/amapiano-mix.mp3"
+    },
+    {
+      "id": 5,
+      "slug": "series-maisha-mapya-s01e01",
+      "title": "Series: Maisha Mapya S01E01",
+      "category": "Series",
+      "tags": ["Series","Drama"],
+      "date": "2025-05-01",
+      "thumbUrl": "https://picsum.photos/800/450?random=5",
+      "streamUrl": "https://example.com/maisha-mapya-s01e01.mp4",
+      "downloadUrl": "https://example.com/maisha-mapya-s01e01-download.mp4"
+    },
+    {
+      "id": 6,
+      "slug": "diamond-african-queen",
+      "title": "Diamond Platnumz — African Queen",
+      "category": "Music",
+      "tags": ["Afrobeat","Video"],
+      "date": "2025-04-12",
+      "thumbUrl": "https://picsum.photos/800/450?random=6",
+      "streamUrl": "https://example.com/african-queen.mp4",
+      "downloadUrl": "https://example.com/african-queen-download.mp4"
+    },
+    {
+      "id": 7,
+      "slug": "movie-mission-danger",
+      "title": "Movie: Mission Danger (2025)",
+      "category": "Movies",
+      "tags": ["Action","Hollywood"],
+      "date": "2025-03-20",
+      "thumbUrl": "https://picsum.photos/800/450?random=7",
+      "downloadUrl": "https://example.com/mission-danger.mp4"
+    },
+    {
+      "id": 8,
+      "slug": "praise-choir-live",
+      "title": "Praise Choir — Live Worship",
+      "category": "Gospel",
+      "tags": ["Worship","Live"],
+      "date": "2025-02-15",
+      "thumbUrl": "https://picsum.photos/800/450?random=8",
+      "streamUrl": "https://example.com/praise-choir.mp3",
+      "downloadUrl": "https://example.com/praise-choir-download.mp3"
+    },
+    {
+      "id": 9,
+      "slug": "dj-amapiano-vol2",
+      "title": "DJ Sbu — Amapiano Mix Vol.2",
+      "category": "Amapiano",
+      "tags": ["Amapiano","Mix"],
+      "date": "2025-01-10",
+      "thumbUrl": "https://picsum.photos/800/450?random=9",
+      "downloadUrl": "https://example.com/amapiano-vol2.mp3"
+    },
+    {
+      "id": 10,
+      "slug": "series-maisha-mapya-s01e02",
+      "title": "Series: Maisha Mapya S01E02",
+      "category": "Series",
+      "tags": ["Series","Drama"],
+      "date": "2025-01-05",
+      "thumbUrl": "https://picsum.photos/800/450?random=10",
+      "streamUrl": "https://example.com/maisha-mapya-s01e02.mp4",
+      "downloadUrl": "https://example.com/maisha-mapya-s01e02-download.mp4"
+    },
+    {
+      "id": 11,
+      "slug": "harmonize-njema",
+      "title": "Harmonize — Njema (Audio)",
+      "category": "Music",
+      "tags": ["Bongo Fleva","Audio"],
+      "date": "2025-08-20",
+      "thumbUrl": "https://picsum.photos/800/450?random=11",
+      "streamUrl": "https://example.com/njema.mp3",
+      "downloadUrl": "https://example.com/njema-download.mp3"
+    },
+    {
+      "id": 12,
+      "slug": "movie-rising-sun",
+      "title": "Movie: Rising Sun (2025)",
+      "category": "Movies",
+      "tags": ["Drama","Action"],
+      "date": "2025-07-10",
+      "thumbUrl": "https://picsum.photos/800/450?random=12",
+      "downloadUrl": "https://example.com/rising-sun.mp4"
+    },
+    {
+      "id": 13,
+      "slug": "joyful-sounds-gospel2",
+      "title": "Joyful Sounds — Evening Praise",
+      "category": "Gospel",
+      "tags": ["Praise","Live"],
+      "date": "2025-06-25",
+      "thumbUrl": "https://picsum.photos/800/450?random=13",
+      "streamUrl": "https://example.com/evening-praise.mp3",
+      "downloadUrl": "https://example.com/evening-praise-download.mp3"
+    },
+    {
+      "id": 14,
+      "slug": "dj-fresh-amapiano-vol3",
+      "title": "DJ Fresh — Amapiano Mix Vol.3",
+      "category": "Amapiano",
+      "tags": ["Mix","Amapiano"],
+      "date": "2025-06-01",
+      "thumbUrl": "https://picsum.photos/800/450?random=14",
+      "downloadUrl": "https://example.com/amapiano-vol3.mp3"
+    },
+    {
+      "id": 15,
+      "slug": "series-maisha-mapya-s01e03",
+      "title": "Series: Maisha Mapya S01E03",
+      "category": "Series",
+      "tags": ["Series","Drama"],
+      "date": "2025-05-10",
+      "thumbUrl": "https://picsum.photos/800/450?random=15",
+      "streamUrl": "https://example.com/maisha-mapya-s01e03.mp4",
+      "downloadUrl": "https://example.com/maisha-mapya-s01e03-download.mp4"
+    },
+    {
+      "id": 16,
+      "slug": "diamond-solo",
+      "title": "Diamond Platnumz — Solo (Audio)",
+      "category": "Music",
+      "tags": ["Afrobeat","Audio"],
+      "date": "2025-04-20",
+      "thumbUrl": "https://picsum.photos/800/450?random=16",
+      "streamUrl": "https://example.com/diamond-solo.mp3",
+      "downloadUrl": "https://example.com/diamond-solo-download.mp3"
+    },
+    {
+      "id": 17,
+      "slug": "movie-silent-wind",
+      "title": "Movie: Silent Wind (2025)",
+      "category": "Movies",
+      "tags": ["Thriller","Action"],
+      "date": "2025-03-30",
+      "thumbUrl": "https://picsum.photos/800/450?random=17",
+      "downloadUrl": "https://example.com/silent-wind.mp4"
+    },
+    {
+      "id": 18,
+      "slug": "praise-choir-evening",
+      "title": "Praise Choir — Evening Worship",
+      "category": "Gospel",
+      "tags": ["Worship","Live"],
+      "date": "2025-02-25",
+      "thumbUrl": "https://picsum.photos/800/450?random=18",
+      "streamUrl": "https://example.com/evening-choir.mp3",
+      "downloadUrl": "https://example.com/evening-choir-download.mp3"
+    },
+    {
+      "id": 19,
+      "slug": "dj-sbu-amapiano-vol3",
+      "title": "DJ Sbu — Amapiano Mix Vol.3",
+      "category": "Amapiano",
+      "tags": ["Mix","Amapiano"],
+      "date": "2025-01-25",
+      "thumbUrl": "https://picsum.photos/800/450?random=19",
+      "downloadUrl": "https://example.com/amapiano-vol3.mp3"
+    },
+    {
+      "id": 20,
+      "slug": "series-maisha-mapya-s01e04",
+      "title": "Series: Maisha Mapya S01E04",
+      "category": "Series",
+      "tags": ["Series","Drama"],
+      "date": "2025-05-20",
+      "thumbUrl": "https://picsum.photos/800/450?random=20",
+      "streamUrl": "https://example.com/maisha-mapya-s01e04.mp4",
+      "downloadUrl": "https://example.com/maisha-mapya-s01e04-download.mp4"
+    },
+    {
+      "id": 21,
+      "slug": "harmonize-jamii",
+      "title": "Harmonize — Jamii (Audio)",
+      "category": "Music",
+      "tags": ["Bongo Fleva","Audio"],
+      "date": "2025-08-25",
+      "thumbUrl": "https://picsum.photos/800/450?random=21",
+      "streamUrl": "https://example.com/jamii.mp3",
+      "downloadUrl": "https://example.com/jamii-download.mp3"
+    },
+    {
+      "id": 22,
+      "slug": "movie-dark-night",
+      "title": "Movie: Dark Night (2025)",
+      "category": "Movies",
+      "tags": ["Horror","Action"],
+      "date": "2025-07-05",
+      "thumbUrl": "https://picsum.photos/800/450?random=22",
+      "downloadUrl": "https://example.com/dark-night.mp4"
+    },
+    {
+      "id": 23,
+      "slug": "joyful-sounds-morning",
+      "title": "Joyful Sounds — Morning Praise",
+      "category": "Gospel",
+      "tags": ["Praise","Live"],
+      "date": "2025-06-10",
+      "thumbUrl": "https://picsum.photos/800/450?random=23",
+      "streamUrl": "https://example.com/morning-praise.mp3",
+      "downloadUrl": "https://example.com/morning-praise-download.mp3"
+    },
+    {
+      "id": 24,
+      "slug": "dj-fresh-amapiano-vol4",
+      "title": "DJ Fresh — Amapiano Mix Vol.4",
+      "category": "Amapiano",
+      "tags": ["Mix","Amapiano"],
+      "date": "2025-06-05",
+      "thumbUrl": "https://picsum.photos/800/450?random=24",
+      "downloadUrl": "https://example.com/amapiano-vol4.mp3"
+    },
+    {
+      "id": 25,
+      "slug": "series-maisha-mapya-s01e05",
+      "title": "Series: Maisha Mapya S01E05",
+      "category": "Series",
+      "tags": ["Series","Drama"],
+      "date": "2025-05-30",
+      "thumbUrl": "https://picsum.photos/800/450?random=25",
+      "streamUrl": "https://example.com/maisha-mapya-s01e05.mp4",
+      "downloadUrl": "https://example.com/maisha-mapya-s01e05-download.mp4"
+    }
+  ]
+}
